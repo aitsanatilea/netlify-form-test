@@ -2,20 +2,86 @@
 <html lang="en">
 
   <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="27217eb1-538f-4b50-b786-f3d38ae1bb0a" type="text/javascript" async></script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M7BJBRJ');</script>
-    <!-- End Google Tag Manager -->
+    <!-- <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="27217eb1-538f-4b50-b786-f3d38ae1bb0a" type="text/javascript" async></script> -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Cookie consent test</title>
   </head>
 
   <body>
+    <script src="https://cc.cdn.civiccomputing.com/8.0/cookieControl-8.0.min.js"></script>
+    <script>
+        var config = {
+            apiKey: 'ab0bbe4025d2d25200af3d99c29d07d68fcabfe1',
+            product: 'COMMUNITY',
+            initialState: "OPEN",
+            position: 'RIGHT',
+            theme: 'DARK'
+            statement : {
+                description: 'For more information vist our',
+                name : 'Privacy Statement',
+                url: 'https://www.civicuk.com/cookie-control/v8/documentation',
+                updated : '12/07/2018'
+            },
+            text : {
+                title: 'This site uses cookies.',
+                intro:  'Some of these cookies are essential, while others help us to improve your experience by providing insights into how the site is being used.',
+                necessaryTitle : 'Necessary Cookies',
+                necessaryDescription : 'Necessary cookies enable core functionality. The website cannot function properly without these cookies, and can only be disabled by changing your browser preferences.',
+                thirdPartyTitle : 'Warning: Some cookies require your attention',
+                thirdPartyDescription : 'Consent for the following cookies could not be automatically revoked. Please follow the link(s) below to opt out manually.'
+            },
+            optionalCookies: [
+                {
+                        name: 'analytics',
+                        label: 'Analytics',
+                        description: 'Analytical cookies help us to improve our website by collecting and reporting information on its usage.',
+                        cookies: ['_ga', '_gid', '_gat', '__utma', '__utmt', '__utmb', '__utmc', '__utmz', '__utmv'],
+                        onAccept : function(){
+                            <!-- Google Tag Manager -->
+                            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                            })(window,document,'script','dataLayer','GTM-M7BJBRJ');
+                            <!-- End Google Tag Manager -->
+                            console.log("Accepted analytic cookies.");
+                        },
+                        onRevoke: function(){
+                            // Disable Google Analytics
+                            window['ga-disable-UA-XXXXX-Y'] = true;
+                            // End Google Analytics
+                            console.log("Declined analytic cookies.");
+                        }
+                    },{
+                        name: 'marketing',
+                        label: 'Marketing',
+                        description: '',
+                        cookies: [],
+                        onAccept : function(){
+                          console.log("Accepted marketing cookies.");
+                        },
+                        onRevoke: function(){
+                          console.log("Declined marketing cookies.");
+                        }
+                    },{
+                        name: 'preferences',
+                        label: 'Preferences',
+                        description: '',
+                        cookies: [],
+                        onAccept : function(){
+                          console.log("Accepted preferences cookies.");
+                        },
+                        onRevoke: function(){
+                          console.log("Declined preferences cookies.");
+                        }
+                    }
+            ]
+        };
+
+        CookieControl.load( config );
+    </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7BJBRJ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
