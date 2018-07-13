@@ -2,37 +2,41 @@
 <html lang="en">
 
   <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M7BJBRJ');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Netlify form</title>
+    <title>Cookie consent test</title>
   </head>
 
-  <body id="page-top">
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7BJBRJ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
 
-  <form id="my-form" name="contact" method="POST" netlify>
-    <p>
-      <label>Your Name: <input type="text" name="name" /></label>
-    </p>
-    <p>
-      <label>Your Email: <input type="email" name="email" /></label>
-    </p>
-    <p>
-      <label>Your Role: <select name="role[]" multiple>
-        <option value="leader">Leader</option>
-        <option value="follower">Follower</option>
-      </select></label>
-    </p>
-    <p>
-      <label>Message: <textarea name="message"></textarea></label>
-    </p>
-    <div data-netlify-recaptcha></div>
-    <p>
-      <button type="submit">Send</button>
-    </p>
-  </form>
+    <h4>Hello there!</h4> 
+    <form id="my-form" name="contact" method="POST" netlify>
+      <p>
+        <label>Your Name: <input type="text" name="name" /></label>
+      </p>
+      <p>
+        <label>Your Email: <input type="email" name="email" /></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <div data-netlify-recaptcha></div>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
 
-  <script src="jquery.min.js"></script>
-  <script src="script.js"></script>
   </body>
 </html>
